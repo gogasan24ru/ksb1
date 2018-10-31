@@ -16,7 +16,7 @@ class auth
             $authResult = $am->auth($_POST['username'],$_POST['password']);
 
             if($authResult===true){
-                Header("Location: ./?module=listTasks");
+                Header("Location: ./");
             }
         }
         $result="";
