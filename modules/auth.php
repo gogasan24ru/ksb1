@@ -3,6 +3,7 @@
 class auth
 {
     function render(){
+        $result="";
         if (isset($_GET['logout']))
         {
             $am=new authManagerHelper();
@@ -14,16 +15,18 @@ class auth
         {
             $am=new authManagerHelper();
             $authResult = $am->auth($_POST['username'],$_POST['password']);
-
             if($authResult===true){
                 Header("Location: ./");
             }
+            else
+            {
+                $result=helperSigleton::getInstance()->messageBox("Invalid username or password",true);
+            }
         }
-        $result="";
         $am=new authManagerHelper();
         if($am->authResult()=="")
         {
-            $result=$this->renderAuthForm();
+            $result.=$this->renderAuthForm();
         }
         return $result;
 
