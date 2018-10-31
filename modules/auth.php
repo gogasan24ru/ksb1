@@ -37,7 +37,7 @@ class auth
           '
             <form method="POST" >  
                 <input type="hidden" name="module" value="auth">
-                <table>
+                <table class="t">
                     <thead>
                     </thead>
                     <tbody>
