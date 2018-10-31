@@ -1,0 +1,104 @@
+.menu {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.menu a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.contents{
+    margin-top: 50px;
+}
+
+.messagebox {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.error {
+    background-color: red;
+}
+.ok {
+    background-color: greenyellow;
+}
+
+/*CSS FROM https://divtable.com/table-styler/*/
+table.t {
+    border: 1px solid #A4A4A4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table.t td, table.t th {
+    border: 2px solid #AAAAAA;
+    padding: 3px 2px;
+}
+table.t tbody td {
+    font-size: 13px;
+}
+table.t thead {
+    background: #A4A4A4;
+    background: -moz-linear-gradient(top, #bbbbbb 0%, #adadad 66%, #A4A4A4 100%);
+    background: -webkit-linear-gradient(top, #bbbbbb 0%, #adadad 66%, #A4A4A4 100%);
+    background: linear-gradient(to bottom, #bbbbbb 0%, #adadad 66%, #A4A4A4 100%);
+    border-bottom: 2px solid #444444;
+}
+table.t thead th {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    border-left: 2px solid #444444;
+}
+table.t thead th:first-child {
+    border-left: none;
+}
+
+table.t tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #D2D2D2;
+    background: -moz-linear-gradient(top, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+    background: -webkit-linear-gradient(top, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+    background: linear-gradient(to bottom, #dddddd 0%, #d6d6d6 66%, #D2D2D2 100%);
+    border-top: 2px solid #444444;
+}
+table.t tfoot td {
+    font-size: 14px;
+}
+table.t tfoot .links {
+    text-align: right;
+}
+table.t tfoot .links a{
+    display: inline-block;
+    background: #676767;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/**/
+table.t td a{
+    display: inline-block;
+    background: #676767;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
