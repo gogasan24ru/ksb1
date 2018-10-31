@@ -18,3 +18,5 @@
 ### Запуск и выполнение
 1. Создать БД из файла `setup/database.sql`.
 2. Исправить содержимое файла `static/config.php` в соответствии с Вашими настройками СУБД.
+
+![](https://screenshotscdn.firefoxusercontent.com/images/9e67b2c3-de1a-45c6-a4e3-ad91235f8f56.png)
