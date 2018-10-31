@@ -34,7 +34,7 @@ class listTasks
         $ret='
         <h1>Tickets</h1>
         
-        <table><thead><tr><td>ID</td><td>Date</td><td>FIO</td><td>Action group</td></tr></thead><tbody>
+        <table class="t"><thead><tr><td>ID</td><td>Date</td><td>FIO</td><td>Action group</td></tr></thead><tbody>
         ';
         foreach ($data as $datum)
         {
@@ -49,8 +49,10 @@ class listTasks
 
         $ret.='</tbody><tfoot>
         <tr><td colspan="4">
+        <div class="links">
         <a href="?module=listTasks&page='.($page-1).'">PREV.</a> | 
         <a href="?module=listTasks&page='.($page+1).'">NEXT</a>
+        </div>
         </td></tr>
 
         </tfoot></table>';
