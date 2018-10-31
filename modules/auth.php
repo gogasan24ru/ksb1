@@ -15,14 +15,18 @@ class auth
     function renderAuthForm()
     {
         return
-            '
-            <form method="POST" >
-            <input type="hidden" name="module" value="auth">
-            <input type="text" name="username">
-            <input type="password" name="password">
-            <input type="submit" value="Login">
-            
-            
+          '
+            <form method="POST" >  
+                <input type="hidden" name="module" value="auth">
+                <table>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr><td>Username</td><td><input type="text" name="username"></td></tr>
+                        <tr><td>Password</td><td><input type="password" name="password"></td></tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Login">
             </form>
             
             ';
