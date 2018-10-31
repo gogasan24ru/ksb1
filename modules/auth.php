@@ -3,8 +3,24 @@
 class auth
 {
     function render(){
+        if (isset($_GET['logout']))
+        {
+            $am=new authManagerHelper();
+            $am->logout();
+            Header("Location: ./");
+        }
+
+        if(isset($_POST['username']))
+        {
+            $am=new authManagerHelper();
+            $authResult = $am->auth($_POST['username'],$_POST['password']);
+
+            if($authResult===true){
+                Header("Location: ./?module=listTasks");
+            }
+        }
         $result="";
-        $am=new authManager();
+        $am=new authManagerHelper();
         if($am->authResult()=="")
         {
             $result=$this->renderAuthForm();
