@@ -9,6 +9,8 @@
 </head>
 <body>
 <div class="menu">
+
+    <a href="./">Home</a>
     <?php if ($authed) {?>
         <a href="?module=listTasks">List tasks</a>
         <a href="?module=auth&logout=1">Logout</a>
