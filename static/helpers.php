@@ -25,11 +25,17 @@ class helperSigleton
         return self::$instance;
     }
 
+    public static function messageBox($message,$error=false){
+        return "<div class='messagebox ".($error?"error":"ok")."'>".$message."</div>";
+    }
+
     public static function getDB()
     {
         return self::$db;
     }
 }
+
+
 
 class authManagerHelper
 {
@@ -46,8 +52,8 @@ class authManagerHelper
     function auth($username, $password)
     {
         session_start();
-        $data=helperSigleton::getInstance()->getDB()->getOne("SELECT id,username FROM users WHERE password=?s AND username=?s",md5($password),$username);
-        if($data==false)return false;
+        $data=helperSigleton::getInstance()->getDB()->getRow("SELECT id,username FROM users WHERE password=?s AND username=?s",md5($password),$username);
+        if(!isset($data))return false;
         $_SESSION['username']=$data['username'];
         return true;
     }
