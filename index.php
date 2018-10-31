@@ -1,20 +1,17 @@
 <?php
+session_start();
 //setup
 //require_once "static/functions.php";
 require_once "static/config.php";
 require_once "static/mysql.php";
 require_once "static/helpers.php";
 
+helperSigleton::getInstance($mycnf);
+
+$authed=(new authManagerHelper())->authResult();
 
 if(isset($_GET['module']))
 {
-    $db = new SafeMySQL(
-        array('user' => $mycnf['username'],
-            'pass' => $mycnf['password'],
-            'db' => $mycnf['database'],
-            'host'=>$mycnf['host'],
-            'charset' => 'utf8')
-    );
 
     $module=$_GET['module'];
     include "modules/".$module.'.php';
