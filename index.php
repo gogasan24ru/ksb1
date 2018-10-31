@@ -3,6 +3,7 @@
 //require_once "static/functions.php";
 require_once "static/config.php";
 require_once "static/mysql.php";
+require_once "static/helpers.php";
 
 
 if(isset($_GET['module']))
