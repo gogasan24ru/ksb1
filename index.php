@@ -1,6 +1,6 @@
 <?php
 //setup
-require_once "static/functions.php";
+//require_once "static/functions.php";
 require_once "static/config.php";
 require_once "static/mysql.php";
 
